@@ -1,0 +1,31 @@
+version: "3.7"
+
+services:
+
+  down:
+    image: jwstar/github_down:latest
+    container_name: down
+    volumes:
+      - /downLoad/test:/down
+      - /downLoad:/config
+  caddyd:
+    image: caddy
+    container_name: caddy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /downLoad/Caddyfile:/etc/caddy/Caddyfile
+      - /downLoad/caddy_data:/data
+      - /downLoad/caddy_config:/config
+      - /downLoad/test:/home/share
+
+
+#docker rmi jwstar/github_down:latest
+# docker build -t jwstar/github_down .
+#docker run --name down   jwstar/github_down
+
+
+
+#docker rm -f down

@@ -1,0 +1,43 @@
+
+jobs:
+#    PC windows v2rayN
+  - repo: /2dust/v2rayN/
+    localPath: /down/
+    cronStr: "@weekly"
+
+#   PC windows clash
+  - repo: /Fndroid/clash_for_windows_pkg/     #仓库地址
+    localPath: /down/ #本地路径
+    indexs:  6,7 #可选 索引
+    cronStr: "@weekly"     #定时任务表达式
+    remvStrs:       #可选 提前删除文件关键词,版本号的问题
+      - Clash
+
+  - repo: /Kr328/ClashForAndroid/
+    localPath: /down/
+    cronStr: "@weekly"
+
+  - repo: /2dust/v2rayNG/
+    localPath: /down/
+    cronStr: "@weekly"
+    remvStrs: #可选 提前删除文件关键词
+      - v2rayNG
+
+  - repo: /BoyceLig/Clash_Chinese_Patch/
+    localPath: /down/
+    cronStr: "@weekly"
+#  // go run githubDown.go -r /2dust/v2rayN/ -p /caddy/test/---
+#  // go run githubDown.go -r /BoyceLig/Clash_Chinese_Patch/ -p /caddy/test/
+#  // go run githubDown.go -r /2dust/v2rayNG/ -p  /caddy/test/  -remove v2rayNG---
+#  // go run githubDown.go -r /Kr328/ClashForAndroid/ -p /caddy/test/-----
+#  // go run githubDown.go -r /Fndroid/clash_for_windows_pkg/ -p /caddy/test/ -n 6,7 -remove Clash----
+
+#模板
+#  - repo: /dddd     #仓库地址
+#    localPath: /down #本地路径
+#    indexs: "@every 30s"     #可选 索引
+#    cronStr: d      #定时任务表达式
+#    remvStrs:       #可选 提前删除文件关键词
+#      - AA
+#      - BB
+#    newName: d      #可选 重命名

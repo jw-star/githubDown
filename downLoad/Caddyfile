@@ -1,0 +1,7 @@
+你的域名 {
+
+    file_server {
+        root /home/share
+        browse
+    }
+}
