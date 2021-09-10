@@ -20,6 +20,19 @@ caddy自动https
 
 配置 conf.yml 指定需要下载的realease 定时任务字符串
 
+```yaml
+#模板
+#  - repo: /dddd              #必填 仓库地址
+#    localPath: /down         #必填 本地路径
+#    cronStr: "@every 30s"    #必填 定时任务表达式
+#    indexs: 0                #可选 索引
+#    remvStrs:                #可选 提前删除文件关键词
+#      - AA
+#      - BB
+#    newName: d               #可选 重命名
+```
+
+
 定时任务配置参考: https://crontab.guru/
 
 ### 启动服务
