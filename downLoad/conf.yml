@@ -32,12 +32,4 @@ jobs:
 #  // go run githubDown.go -r /Kr328/ClashForAndroid/ -p /caddy/test/-----
 #  // go run githubDown.go -r /Fndroid/clash_for_windows_pkg/ -p /caddy/test/ -n 6,7 -remove Clash----
 
-#模板
-#  - repo: /dddd     #仓库地址
-#    localPath: /down #本地路径
-#    indexs: "@every 30s"     #可选 索引
-#    cronStr: d      #定时任务表达式
-#    remvStrs:       #可选 提前删除文件关键词
-#      - AA
-#      - BB
-#    newName: d      #可选 重命名
+
