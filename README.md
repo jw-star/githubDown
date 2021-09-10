@@ -1,5 +1,16 @@
 ## 定时下载github realease到文件服务器
 
+### 特点
+
+多仓库配置
+
+定时任务
+
+caddy自动https
+
+相比nginx的文件服务，美观，便于安装
+
+
 ### 使用
 
 可以将downLoad目录复制到根目录
