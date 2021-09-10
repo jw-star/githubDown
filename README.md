@@ -1,5 +1,3 @@
-# githubDown
-
 ## 定时下载github realease到文件服务器
 
 ### 使用
@@ -14,16 +12,32 @@
 
 ### 启动服务
 
+安装docker
+```yaml
+curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh --mirror Aliyun&&systemctl enable docker&&systemctl start docker
+```
+
+安装docker-compose
+```yaml
+curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose &&chmod +x /usr/local/bin/docker-compose
+```
+
 后台启动
 ```yaml
 docker-compose up -d
 ```
+
+查看日志
+
+```yaml
+docker-compose logs -f 
+```
+
 
 删除容器
 
 ```yaml
 docker rm -f down caddy
 ```
-
 
 
