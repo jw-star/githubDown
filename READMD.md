@@ -52,3 +52,14 @@ docker rm -f down caddy
 ```
 
 
+### 镜像构建常用
+删除镜像
+
+```yaml
+docker rmi 镜像名称
+```
+
+构建镜像
+```yaml
+docker build -t 镜像名称 .
+```
